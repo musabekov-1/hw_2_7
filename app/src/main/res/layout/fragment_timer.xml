@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TimerFragment">
+
+    <TextView
+        android:id="@+id/tv_timer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="60dp"
+        android:textColor="@color/black"
+        android:text="00:00:00"
+        android:textSize="60sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/et_hour"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        app:layout_constraintStart_toStartOf="@id/tv_timer"
+        app:layout_constraintTop_toBottomOf="@id/tv_timer"
+        app:layout_constraintEnd_toStartOf="@id/et_minute"
+        android:inputType="time"
+        android:textSize="20sp"
+        android:hint="00"
+        android:textColorHint="@color/black"/>
+
+    <EditText
+        android:id="@+id/et_minute"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        app:layout_constraintStart_toEndOf="@id/et_hour"
+        app:layout_constraintTop_toBottomOf="@id/tv_timer"
+        app:layout_constraintEnd_toStartOf="@id/et_second"
+        android:inputType="time"
+        android:textSize="20sp"
+        android:hint="00"
+        android:textColorHint="@color/black"/>
+
+    <EditText
+        android:id="@+id/et_second"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        app:layout_constraintStart_toEndOf="@id/et_minute"
+        app:layout_constraintTop_toBottomOf="@id/tv_timer"
+        app:layout_constraintEnd_toEndOf="@id/tv_timer"
+        android:inputType="time"
+        android:textSize="20sp"
+        android:hint="00"
+        android:textColorHint="@color/black"/>
+
+    <Button
+        android:id="@+id/btn_start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_gravity="center"
+        android:layout_marginTop="60dp"
+        android:text="START" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
